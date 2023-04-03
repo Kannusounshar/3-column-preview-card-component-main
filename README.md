@@ -13,8 +13,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/Kannusounshar/huddle-landing-page-with-single-introductory-section-master
-- Live Site URL: https://lively-arithmetic-7a4746.netlify.app
+- Solution URL: https://github.com/Kannusounshar/3-column-preview-card-component-main
+- Live Site URL: https://venerable-donut-62dae7.netlify.app
 
 ## My process
 
