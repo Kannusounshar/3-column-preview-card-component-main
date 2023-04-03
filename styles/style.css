@@ -14,10 +14,11 @@
   --clr-Bright-orange: hsl(31, 77%, 52%);
 --clr-Dark-cyan: hsl(184, 100%, 22%);
 --clr-Very-dark-cyan: hsl(179, 100%, 13%);
+--radius: 0.8rem;
 }
 
 html {
-  font-size: 16px;
+  font-size: 15px;
   scroll-behavior: smooth;
 }
 
@@ -66,14 +67,90 @@ li {
 
 /* 3 column preview card component */
 body{
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .card-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.card{
+
+ width: 22rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 3rem;
+}
+
+.card-details-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.card-title {
+  font-size: 2.25rem;
+  font-family: var(--ff-shoulder);
+  font-weight:700;
+  text-transform: uppercase;
+  margin: 0;
+  color:#fff;
+}
+.card-description {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--ff-lexend-deca);
+  color: #fff;
+  line-height: 1.5;
   
+}
+.btn-card{
+  padding: 0.75 1.25;
+  border-radius: 25px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: var(--ff-lexend-deca);
+background-color: #fff;
+color: #000;
+border: 2px solid #fff;
+}
+.card-sedans {
+  background-color: var(--clr-Bright-orange);
+  /* radius */
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+.card-sedans .btn-card{
+  color: var(--clr-Bright-orange);
+}
+.card-suvs {
+  background-color: var(--clr-Dark-cyan);
+}
+.card-suvs .btn-card{
+  color: var(--clr-Dark-cyan);
+}
+.card-luxury {
+  background-color: var(--clr-Very-dark-cyan);
+/* radius */
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+.card-luxury .btn-card{
+  color: var(--clr-Very-dark-cyan);
+}
+.btn-card:hover{
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
 }
 @media screen and (min-width: 576px) {
 }
@@ -86,6 +163,27 @@ body{
 /* Large devices (desktops) */
 
 @media (min-width: 991px) {
+  .card-container{
+    padding: 0;
+    flex-direction: row;
+  }
+  .card{
+    width: 21rem;
+    gap: 2rem;
+  }
+  .card-sedans {
+  
+  /* radius */
+  border-top-left-radius:var(--radius);
+  border-top-right-radius:0;
+  border-bottom-left-radius: var(--radius);
+}
+.card-luxury {
+  
+/* radius */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: var(--radius);
+  border-top-right-radius:var(--radius);
 }
 
 /* Extra large devices (large desktops) */
